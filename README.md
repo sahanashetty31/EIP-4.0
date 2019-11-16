@@ -2,8 +2,9 @@
 ## Session 1
 
 **Assignment 1 results**
-print(score)
 
+print(score)
+[0.015810231621237653, 0.9955]
 
 **Definitions**
 
