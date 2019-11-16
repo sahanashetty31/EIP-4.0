@@ -4,6 +4,7 @@
 **Assignment 1 results**
 
 print(score)
+
 [0.015810231621237653, 0.9955]
 
 **Definitions**
