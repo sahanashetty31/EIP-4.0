@@ -9,40 +9,56 @@ model2 = Sequential()
 
 
 model2.add(SeparableConv2D(64, kernel_size=(3, 3), activation='relu', input_shape=(32, 32, 3), padding='same')) #O/P channel size - 32x32x64, RF=3
+
 model2.add(BatchNormalization())
 
 model2.add(SeparableConv2D(64, kernel_size=(3, 3), activation='relu'))#O/P channel size - 30x30x64, RF=5
+
 model2.add(BatchNormalization())
+
 model2.add(Dropout(0.1))
 
+
 model2.add(SeparableConv2D(128, kernel_size=(3, 3), activation='relu', padding='same'))#O/P channel size - 30x30x128, RF=7
+
 model2.add(BatchNormalization())
+
 model2.add(Dropout(0.1))
 
 model2.add(MaxPooling2D(pool_size=(2, 2))) #O/P channel size - 15x15x128, RF=8
 
 model2.add(Convolution2D(64, 1, 1 , activation='relu')) #O/P channel size - 15x15x64, RF=8
+
 model2.add(BatchNormalization())
+
 model2.add(Dropout(0.1))
 
 model2.add(SeparableConv2D(96, kernel_size=(3, 3), activation='relu',padding='same')) # O/P channel size - 15x15x96, RF=12
+
 model2.add(BatchNormalization())
+
 model2.add(Dropout(0.1))
 
 model2.add(SeparableConv2D(128, kernel_size=(3, 3), activation='relu')) #O/P channel size - 13x13x128, RF=16
+
 model2.add(BatchNormalization())
+
 model2.add(Dropout(0.1))
 
 model2.add(MaxPooling2D(pool_size=(2, 2))) #O/P channel size - 6x6x128,RF=18
 
 model2.add(SeparableConv2D(128, kernel_size=(3, 3), activation='relu')) #O/P channel size - 4x4x128, RF=26
+
 model2.add(BatchNormalization())
+
 model2.add(Dropout(0.1))
 
 model2.add(SeparableConv2D(10, kernel_size=(3, 3), activation='relu')) #O/P channel size - 2x2x10, RF=34
+
 model2.add(BatchNormalization())
 
 model2.add(GlobalAveragePooling2D()) #O/P channel size - 1x1x10
+
 model2.add(Activation('softmax'))
 
 model2.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
