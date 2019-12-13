@@ -1,4 +1,5 @@
-*** Logs for 20 epochs ***
+### Logs for 20 epochs ###
+
 Train on 60000 samples, validate on 10000 samples
 Epoch 1/20
 
@@ -84,10 +85,10 @@ Epoch 00020: LearningRateScheduler setting learning rate to 0.00141623.
 <keras.callbacks.History at 0x7f345cda6160>
 
 
-*** Result of model.evaluate (on test data) ***
+### Result of model.evaluate (on test data) ###
 
 [0.022809729901637182, 0.9936]
 
-*** Strategy to achieve the result ***
+### Strategy to achieve the result ###
 1. Reducing the number of kernels.
 2. Changing the learning rate scheduler value.
