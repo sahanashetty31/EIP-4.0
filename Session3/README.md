@@ -5,7 +5,6 @@
 83.27
 
 ### Model definition with output channel size and receptive field ###
-# Define the model
 model2 = Sequential()
 
 
